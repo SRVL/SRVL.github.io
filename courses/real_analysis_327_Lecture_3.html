@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<head>
+  <meta name="viewport" content="width=device-width" />
+ <!--      <link href = "../css/style.css" rel="stylesheet" type = "text/css"/>-->
+
+<script   src="https://code.jquery.com/jquery-2.2.1.min.js"   integrity="sha256-gvQgAFzTH6trSrAWoH1iPo9Xc96QxSZ3feW6kem+O00="   crossorigin="anonymous"></script>
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+<script>
+jQuery(document).ready(function($) {
+  
+    var navbar = $('#navbar-main'),
+        distance = navbar.offset().top,
+        $window = $(window);
+
+    $window.scroll(function() {
+        if ($window.scrollTop() >= distance) {
+            navbar.removeClass('navbar-fixed-top').addClass('navbar-fixed-top');
+            $("body").css("padding-top", "70px");
+        } else {
+            navbar.removeClass('navbar-fixed-top');
+            $("body").css("padding-top", "0px");
+        }
+    });
+});
+</script>
+<title>Tara</title>
+</head>
+  <body>
+
+<div class="container">
+  <header class="page-header">
+    <h1>tnt2113.github.io</h1>
+  </header>
+</div>
+
+<nav id="navbar-main" class="navbar navbar-inverse">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">Tara</a>
+    </div>
+    <div id="navbar" class="collapse navbar-collapse">
+      <ul class="nav navbar-nav">
+        <li><a href="../">Home</a></li>
+        <li><a href="../about">About</a></li>
+        <li><a href="../research">Research</a></li>
+        <li><a href="../code">Code</a></li>
+        <li><a href="../courses">Courses</a></li>
+        <li><a href="../blog">Blog</a></li>
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div>
+</nav>
+
+<main class="container">
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+</script>
+<script type="text/javascript"
+  src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+</head>
+
+<body>
+<h1>Lecture 3</h1>
+
+
+
+<p> Def: We say that $S$ is bounded above by $M$ (ie $M$ is an upper bound for $S$) if $\forall x \in S$, $x \leq M$</p>
+
+<p>A set bounded above admits many upper bounds. We are usually interested in the least upper bound. </p>
+
+<p>Assume $S$ is bounded above. Then by the completeness axiom, if $S$ is not empty, then $S$ has a least upper bound (= supremum).</p>
+
+<p>The defining properties of the supremum:
+<ol>
+<li> $L = sup S \iff L$ is an upper bound for $S$ </li>
+<li> $L = sup S \iff \forall M \in \mathbb{R}$, if $M$ is an upper bound for $S$, then $L \leq M$. </li>
+</ol>
+</p>
+
+
+<p> In Lecture 2, we proved the following characterization: 
+
+\[ L = sup S \iff
+  \begin{cases}
+    \forall x \in S, x \leq L \\
+    \forall \epsilon > 0, \exists x \in S such that L - \epsilon < x \\
+  \end{cases}
+\]
+</p> 
+
+<p>Def: an open interval $(a, b)$, for $a, b \in \mathbb{R}$, $a < b$ is that the set $(a, b) = \{x \in \mathbb{R}, a < x < b \}$</p>
+
+<p>An open interval does not include it's end points. </p>
+
+<p>Def: a closed interval $[a, b]$, for $a, b \in \mathbb{R}$, $a < b$ is that the set $(a, b) = \{x \in \mathbb{R}, a \leq x \leq b \}$</p>
+
+<p>We can also have half-closed, half open intervals: 
+<ul>
+<li> $[a, b) = \{x \in \mathbb{R}$, $a \leq x < b$ \} </li>
+<li> $(a, b] = \{x \in \mathbb{R}$, $a < x \leq b$ \} </li>
+</ul>
+</p>
+<p>Example: $S = (0, 1)$, $1 \notin S$ so we can show $sup S = 1$.</p>
+
+<p>Definition: $S$ is bounded below by $m \in \mathbb{R}$ if $\forall x \in S$, $m \leq x$.</p>
+
+<p>Definition: $S$, bounded below, admits a greatest lower bound (aka GLB or infinum), if there exists $l$ such that:
+<ol>
+<li> $l$ is a lower bound for $S$ </li>
+<li> $\forall m \in \mathbb{R}$ that are lower bounds of $S$, $m \leq l$ </li>
+</ol>
+</p>
+<p>Remember, by the completeness axiom, every $S \neq \emptyset$ bounded above admits a supremum. </p>
+
+<p>Theorem: every $S \subset \mathbb{R}$, $S \neq \emptyset$ bounded below, admits a greatest lower bound or infinum.</p> 
+
+<p>Let's prove this using a reflection argument. </p> 
+
+<p>Proof:</p>
+
+<p>Let $S \subset \mathbb{R}$, $S \neq \emptyset$, bounded below. </p>
+
+<p>Define $S' = \{-x, x\in S\}$</p>
+
+<p>Claim: $S'$ is bounded above.</p>
+
+<p>Let $m$ be a lower bound for $S$. Then $\forall x \in S$, $m \leq x \iff -x \leq -m$</p>
+<p>This means: $\forall x' \in S'$, $x' \leq -m \implies -m$ is an upper bound for $S'$.</p>
+<p>By the completeness axiom, $S'$ has an infinum, called $L$.</p> 
+
+<p>Claim: $-L = inf S$ since $L = sup S'$ then:
+<ol>
+	<li>$\forall x \in S'$, $x \leq L$</li>
+	<li>$\forall M$, U.B of $S'$, $L \leq M$</li>
+</ol> 
+</p>
+<p>Let $x \in S$. Then $-x \in S'$, so by (1) $-x \leq L \iff -L \leq x$.</p>
+<p>So $\forall x \in S$, $-L \leq x$. $-L$ is a lower bound of $S$. </p>
+
+<p>Let $m$ be a lower bound for $S$. Claim: $m \leq -L$</p>
+
+<p>$m$ is a lower bound for $S \iff \forall x \in S$, $m \leq X \iff -m \geq -x \iff \forall x' \in S'$, $x' \leq -m$.</p>
+<p>So $-m$ is an upper bound for $S'$, since $L = sup S'$</p>
+<p>so $L \leq -m \iff m \leq -L$. $\blacksquare$</p>
+
+<p>We can derive everything about lower bounds based on stuff about upper bounds. </p>
+
+<p>NEW THING!! </p>
+
+<p>The distribution of $\mathbb{Q}$ and $\mathbb{Z}$</p>
+
+<p>Definition (the distribution of $\mathbb{Z}$): $\forall c \in \mathbb{R}$, $\exists ! n \in \mathbb{Z}$, $c \leq n < c + 1 \iff n \in [c, c+1)$</p>
+
+<p>Definition (the distribution of $\mathbb{Q}$): $\forall a,b$ such that $a < b$ and $a,b \in \mathbb{R}$, $\exists x \in \mathbb{Q}, x \in (a,b) </p>
+
+<p>$\mathbb{Q}$ populated \mathbb{R} in a dense way.</p>
+
+<p>Thm (Archimedian property): The following equivalent statements hold true:</p>
+<ol>
+	<li>$\forall c > 0$, $\exists n \in \mathbb{N}$ such that $n > c$</li>
+	<li>$\forall \epsilon > 0$, $\exists n \in \mathbb{N}$ such that $0 < \frac{1}{n} < \epsilon$</li>
+</ol>
+</p>
+
+
+<p>Proof: </p>
+
+<p>WTS: (1) $\iff$ (2) given $c>0$ and $\epsilon = \frac{1}{c} > 0$.</p>
+<p>If $n$ is such that $n > c$, then $\frac{1}{n} < \epsilon = \frac{1}{c}$ and vice versa. so (1) $\iff$ (2), as we said. We only need to prove (1)</p>
+
+<p>By contradiction, suppose (1) does not hold. $\exists c > 0$, $\forall n \in \mathbb{N}$, $n \leq C \implies \mathbb{N}$ is bounded above $\implies$ by the completeness axiom, $\exists$ sup $\mathbb{N} = L$. </p>
+
+<p>Since $L$ is the supremum, $L - \frac{1}{2}$ is not an upper bound for $\mathbb{N}$.</p>
+<p>$\exists n \in \mathbb{N}$ such that $L - \frac{1}{2} < n$</p>
+<p>Then $L < L + \frac{1}{2} = L - \frac{1}{2} + 1 < n + 1$</p>
+<p>But $n + 1 \in \mathbb{N}$ and $L$ is an upper bound for $\mathbb{N}$ which is a contradiction! $\blacksquare$</p>
+
+<p>Proposition 1: $\forall n \in \mathbb{Z}$, there is no integer inside $(n, n +1)$</p>
+
+<p>Recall: For $S \subset \mathbb{R}$ bounded above and not empty, sup $S$ always exists, but max $S$ may not always exist.</p>
+<p>Proposition 2: If $S \subset \mathbb{Z}$, $S \neq \emptyset$, bounded above, then max $S$ exists.</p>
+<p>Proof:</p>
+<p>By the completeness axiom, sup $S$ = $a$ always exists. $a$ is the least upper bound, so $a - 1$ is not an upper bound for $S$. So there exists $m \in S$ such that $a - 1 < m \iff a < m + 1$. So $\forall n \in S$, $n \leq a < m+1$ so $S \subset (-\infty, m + 1) = \{x \in \mathbb{R}$ such that $x < m + 1\}$</p>
+<p>But by Prop 1, $(m, m+1)$ has no integer in it. So $S \cap (m, m +1) = \emptyset$. $S \subset (-\infty, m+1)$ with $S \cap (m, m +1) = \emptyset$ so $S \subset (-\infty, m]$ since $m \in S$. $m$ is an upper bound for $S$ and since $m \in S$, $m = max S$. $\blacksquare$</p>
+
+</main>
+</body>
+</html>

@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<head>
+  <meta name="viewport" content="width=device-width" />
+ <!--      <link href = "../css/style.css" rel="stylesheet" type = "text/css"/>-->
+
+<script   src="https://code.jquery.com/jquery-2.2.1.min.js"   integrity="sha256-gvQgAFzTH6trSrAWoH1iPo9Xc96QxSZ3feW6kem+O00="   crossorigin="anonymous"></script>
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+<script>
+jQuery(document).ready(function($) {
+  
+    var navbar = $('#navbar-main'),
+        distance = navbar.offset().top,
+        $window = $(window);
+
+    $window.scroll(function() {
+        if ($window.scrollTop() >= distance) {
+            navbar.removeClass('navbar-fixed-top').addClass('navbar-fixed-top');
+            $("body").css("padding-top", "70px");
+        } else {
+            navbar.removeClass('navbar-fixed-top');
+            $("body").css("padding-top", "0px");
+        }
+    });
+});
+</script>
+<title>Tara</title>
+</head>
+  <body>
+
+<div class="container">
+  <header class="page-header">
+    <h1>tnt2113.github.io</h1>
+  </header>
+</div>
+
+<nav id="navbar-main" class="navbar navbar-inverse">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">Tara</a>
+    </div>
+    <div id="navbar" class="collapse navbar-collapse">
+      <ul class="nav navbar-nav">
+        <li><a href="../">Home</a></li>
+        <li><a href="../about">About</a></li>
+        <li><a href="../research">Research</a></li>
+        <li><a href="../code">Code</a></li>
+        <li><a href="../courses">Courses</a></li>
+        <li><a href="../blog">Blog</a></li>
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div>
+</nav>
+
+<main class="container">
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+</script>
+<script type="text/javascript"
+  src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+</head>
+
+<body>
+<h1>Lecture 6</h1>
+<h3>Convergence of sequences</h3>
+<p><b>Definition:</b> a sequence is a function, $f: \mathbb{N} \rightarrow \mathbb{R}, n \rightarrow f(n)$</p>
+
+<p>We denote a sequence with one of the following:
+<ul>
+  <li>$\big\{{a_{n}}\big\}_{n \in \mathbb{N}}$</li>
+  <li>$/{a_{n}/}$</li>
+  <li>${(a_{n})}_{n}$</li>
+</ul></p>
+
+<p>We say that $a_{n} is the n^{th} term. We can start at index = 0, 1, ... any number really.</p>
+
+<p>Examples:</p>
+<ul>
+  <li>${(a_{n})} = \frac{1}{n}$</li>
+  <li>${(a_{n})} = (-1)^n$</li>  
+  <li>${(a_{n})} =$ the largest integer less than $\sqrt{n}$</li>
+</ul></p>
+<p>Sequences can be defined by induction: For example, take $u_{1} = 1$. Given a defined $u_{n}$, let $u_{n+1} = 5u_{n} + 7$. This gives $u_{n+1}$ in terms of $u_{n}$</p>
+<p>Example: Consider <a href ="https://www.youtube.com/watch?v=ahXIMUkSXX0">the Fibonacci sequence</a>. $u_{0} = 1, u_{1} = 1$ and $u_{n+2} = u_{n+1} + u_{n}$. Values: 1, 1, 2, 3, 5, 8, 13, 21, ...</p>
+<p>Example: If ${(a_{n})}$ is a sequence, let for $n \in \mathbb{N}: b_{n} = \sum_{k=1}^{n} a_k$ </p>
+<p>$b_n$ is called the n^{th} partial sum. The "$\sum_{k=1}^{n} a_k$" part is an infinite sequence (or series)</p>
+<p>Example: If $r \in \mathbb{R}$, let $b_n = \sum_{k=1}^{n} r_k$ is a geometric series. A geometric series can converge or diverge.</p>
+<p>Example: $b_n = \sum_{k=1}^{n} \frac{1}{k}$ is a harmonic series. A harmonic series diverges.</p>
+<p>Example: If $p>0$, $b_n = \sum_{k=1}^{n} \frac{1}{k^p}$ is a "p" series. Converges or diverges.</p>
+<p>Question: Let ${(a_{n})}$ a sequence. What happens as $n$ gets larger? How do you express that the terms $a_{n}$ approach some value, lets call it "$a$", as the index $n$ increases? Where do the terms of this sequence go? </p>
+
+<p>Definition: The sequence ${(a_{n})}$ <b>converges</b> if $\exists a \in \mathbb{R}$ such that $\forall \epsilon > 0, \exists N \in \mathbb{N}, n \geq N \implies |a_{n} - a| < \epsilon$. We also write: $\lim_{x\to\infty} a_{n} = a$</p>
+
+<p> Viz to go here </p>
+<p>If we now take $\epsilon / 2$, the proprty gives another $N$ that yields another $|a_{n}-a| < \epsilon / 2$</p>
+<p>SURPRISE: Not every sequence converges. $\lim_{x\to\infty} a_{n}$ may not exist. </p>
+<p>Claim: If $\lim_{x\to\infty} a_{n}$ exists, then it is unique.  </p>
+<p><i> Proof:</i>  <br>
+<blockquote> Suppose by contradiction, $\lim_{x\to\infty}$ converges to both "$a$" and "$a'$" and that $a \neq a'$<br>
+(1) $\forall \epsilon > 0, \exists N \in \mathbb{N}, n \geq N \implies |a_{n} - a| < \epsilon$<br>
+(2) $\forall \epsilon > 0, \exists N' \in \mathbb{N}, n \geq N' \implies |a_{n} - a'| < \epsilon$<br>
+Let $\epsilon = \frac{|a' - a|}{4} > 0$<br>
+By (1), $\exists N_{1} \in \mathbb{N}, n \geq N_{1} \implies |a_{n} - a| < \epsilon$<br>
+By (2), $\exists N_{2} \in \mathbb{N}, n \geq N_{2} \implies |a_{n} - a'| < \epsilon$<br>
+Let n = max($N_{1}, N_{2}$), then $|a_{n} - a| < \epsilon = \frac{|a' - a|}{4}$ and $|a_{n} - a'| < \epsilon = \frac{|a' - a|}{4}$ <br>
+Using the triangle inequality, $|a' - a| = |(a - a_{n}) -(a' - a_{n})| \leq |a - a_{n}| + |a' - a_{n}| < \frac{|a' - a|}{4} + \frac{|a' - a|}{4} = \frac{|a' - a|}{2}$ <br>
+$\implies |a' - a| < \frac{|a' - a|}{2} $ which is a contradiction! So $a \neq a'$ is impossible and $\lim_{n\to\infty} a_{n}$ is unique.  $\qquad \qquad \qquad \square$ <br>
+<br>
+</blockquote>
+</p>
+
+<p>Example: prove that $\lim_{n\to\infty} \frac{1}{n} = 0$ </p>
+<p>Want to show: $\forall \epsilon > 0, \exists N \in \mathbb{N}, n \geq N \implies |\frac{1}{n} - 0| < \epsilon$ </p>
+<p> Notice that: $|\frac{1}{n} - 0| = |\frac{1}{n}| = \frac{1}{n}$, so really we want to show: $\forall \epsilon > 0, \exists N \in \mathbb{N}, n \geq N \implies \frac{1}{n} < \epsilon$. Will use the Archimedian Principle. </p>
+<p>Let $\epsilon > 0$. By the Archimedian Principle, $\exists N$ such that $\frac{1}{N} < \epsilon$, then, if $n \geq N, \frac{1}{n} \leq \frac{1}{N} < \epsilon$. $\qquad \qquad \qquad \square$</p>
+
+<p>Example: The sequence $a_{n} = (-1)^n$ does not converge. $a_{1} = -1, a_{2} = 1, a_{3} = -1, ...$ We don't expect it to approach any limit.</p>
+
+<p>Claim: If $\lim_{n\to\infty} a_{n}$ exists, then $\lim_{n\to\infty} |a_{n+1} - a_{n}| = 0$.  </p>
+<p>If $\lim_{n\to\infty} |a_{n+1} - a_{n}| \neq 0$ then $\lim_{n\to\infty} a_{n}$ does not exist.  </p>
+<p>If ${/{b_{n}/}_{n \in \mathbb{N}}$ is such that $b_{n} = b \in \mathbb{R}, \forall n \in \mathbb{N} \implies \lim_{n\to\infty} b_{n} = b$, </p>
+<p>Example: The sequence $a_{n} = (-1)^n$ does not converge. In this case, $|a_{n+1} - a_{n}| = |(-1)^{n+1} - (-1)^{n}| = 2$. So $\lim_{n\to\infty} |a_{n+1} - a_{n}| = 2 \neq 0$ and the sequence does not converge.</p>
+
+<p>Example: Show $\lim_{n\to\infty} (\frac{2}{n^2} + \frac{4}{n} + 3 ) = 3.</p>
+<p>Want to show: $\forall \epsilon > 0, \exists N \in \mathbb{N}, n \geq N \implies |\frac{2}{n^2} + \frac{4}{n} + 3 - 3| < \epsilon$ </p>
+<p> Notice that: |\frac{2}{n^2} + \frac{4}{n} + 3 - 3| = |\frac{2}{n^2} + \frac{4}{n}| = \frac{2}{n^2} + \frac{4}{n} </p>
+<p> Notice that: n^2 \geq n \implies \frac{1}{n^2} \leq \frac{1}{n}. So \frac{2}{n^2} + \frac{4}{n} \leq \frac{6}{n} </p>
+<p> <i>Proof:</i> Let $\epsilon > 0$. Since $\lim_{n\to\infty} \frac{1}{n} = 0, \exists N, \frac{1}{N} < \frac{\epsilon}{6} \iff \frac{6}{N} < \epsilon. </p>
+<p>Then, $\forall n \geq N, \frac{2}{n^2} + \frac{4}{n} \leq \frac{6}{n} \leq \frac{6}{N} < \epsilon $ $\qquad \qquad \qquad \square$</p>
+<h3>The Comparison Lemma</h3>
+<p>The Comparison Lemma: let two sequences, $a_{n}, b_{n}, a,b \in \mathbb{R}$. Suppose $\lim_{n\to\infty} a_{n} = a$ and $\exists c > 0, N_{0} \in \mathbb{N}, \forall n \geq N_{0}, |b_{n}-b| \leq c |a_{n} - a|$. Then $\lim_{n\to\infty} b_{n} = b$</p>
+<p><i> Proof:</i>  <br>
+<blockquote> Want to show: $\forall \epsilon > 0, \exists N \in \mathbb{N}, n \geq N \implies |b_{n} - b| < \epsilon$  <br>
+Let $\epsilon > 0$. Since $\lim_{n\to\infty} a_{n} = a, \forall \epsilon > 0, \exists n \geq N, |a_{n} - a| < \epsilon$/<br>
+Consider $\frac{\epsilon}{c} > 0$. $\exists N_{1}, \forall n \geq N_{1}, |a_{n} - a| < \frac{\epsilon}{c}$<br>
+Set N = max(N_{0}, N_{1}). Then, $\forall n \geq N, |b_{n}| \leq c |a_{n} - a| < c \cdot \frac{\epsilon}{c} = c$  $\qquad \qquad \qquad \square$ <br>
+<br>
+</blockquote>
+</p>
+</main>
+</body>
+</html>
