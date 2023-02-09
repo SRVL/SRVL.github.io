@@ -48,12 +48,5 @@ body {
     color: #f9f9f9;
   }
 
-  .terminal {
-    --color: rgba(0, 128, 0, 0.9);
-    --background: rgb(0, 0, 0);
-    --animation: terminal-underline;
-    --size: 1.5;
-    /* better then return false in onBlur */
-    height: 100vh;
-  }
+
   

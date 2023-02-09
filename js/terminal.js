@@ -7,7 +7,7 @@ var titleText = function(text){
 }
 
 var hiddenLetter = function(text){
-  return "[[u;inherit;]" + text + "]";
+  return "[[g;#FFC0CB;]" + text + "]";
 }
 
 var App = {
@@ -31,7 +31,7 @@ var App = {
       this.echo();
       this.echo("|  " + commandText("motd") + "               - Display Message of the Day");
       this.echo();
-      this.echo("|  " + commandText("about") + "              - Summary of me");
+      this.echo("|  " + commandText("about") + "              - About the Operating System");
       this.echo("|  " + commandText("projects") + "           - Some recent projects of mine");
       this.echo("|  " + commandText("skills") + "             - What I can do");
       this.echo("|  " + commandText("awards") + "             - Awards and features for my work");
@@ -74,9 +74,9 @@ var App = {
 
   about: function(){
       this.echo();
-      this.echo("|  Name:         " + commandText('Ronnie Pyne'));
-      this.echo("|  DOB:          25/11/1985");
-      this.echo("|  Location:     " + commandText('Surry Hills, NSW'));
+      this.echo("|  Product Name:   " + commandText('SRV OS'));
+      this.echo("|  Version Number: " + hiddenLetter('2.1.4'));
+      this.echo("|  Serial number:  " + commandText("sRtJDi3PFk7EAFKkZzWS"));
       this.echo();
       this.echo("|  Vocation:     I am a Full Stack Web Developer (primarily " + commandText('PHP') + ", " + commandText('Node.js') + ") and DevOps (Linux, AWS) specialist.");
       this.echo("|                I have been coding in a commercial environment for " + commandText('over 12 years.'));
