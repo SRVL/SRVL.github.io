@@ -38,7 +38,7 @@ var App = {
       this.echo();
       this.echo("|  " + commandText("motd") + "               - Display Message of the Day");
       this.echo();
-      this.echo("|  " + commandText("about") + "              - About the Operating System");
+      this.echo("|  " + commandText("about") + "              - About SRV OS");
       this.echo("|  " + commandText("projects") + "           - Some recent projects of mine");
       this.echo("|  " + commandText("attributes") + "         - Serval statistics");
       this.echo("|  " + commandText("awards") + "             - Awards and features for my work");
@@ -55,7 +55,11 @@ var App = {
       this.echo();
   },
 
-  asciiTaka: function(){
+  valentines: function(){
+    window.open("../webpages/valentines.html"); 
+},  
+
+  ASCIItaka: function(){
     this.echo(",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,\n"+
     ",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,\n" +
     ",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,\n"+
@@ -90,7 +94,7 @@ var App = {
     ",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,")
 },
 
-asciiKyan: function(){
+ASCIIbuck: function(){
     this.echo(",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,\n"+
     ",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,.,,,,,,,,,,,*,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,\n"+
     ",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,*,,,,,,,,,\n"+
@@ -127,9 +131,16 @@ asciiKyan: function(){
 },
   
 
-  github: function(){
+  ascii: function(){
       this.echo();
-      this.echo("|  http://www.github.com/perverse");
+      this.echo("| " +hiddenLetter("ASCII") + " ar" +hiddenLetter("t") + " is " +hiddenLetter("a") + " form of digital art that uses the characters from the ASCII character set to create images.\n" + 
+    "The simplicity of ASCII art makes it accessible to anyone with a computer.\n");
+    this.echo(); 
+    this.echo("Despite its " +hiddenLetter("b") + "asic appearance, ASCII art has the power to evo" +hiddenLetter("k") + "e emotions and convey ide" +hiddenLetter("a") + "s through its imaginative " + hiddenLetter("u") + "se of lines and symbols." +
+    "Its versatility has made it popular in various forms of digital media\nincluding social media platforms instant messaging, and even email signatures.\n");  
+    this.echo();
+    this.echo("The " +hiddenLetter("c") + "reativity of ASCII artists never fails to impress, as they continue to find new and innovative ways to push the boundaries of what can be achieved using only ASCII characters.\n" +
+    "Whether it's a whimsical cartoon, a " +hiddenLetter("k") + "ind portrait, or a detailed landscape, ASCII art never fails to be a source of inspiration and awe.\n");
       this.echo();
   },
 

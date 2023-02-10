@@ -46,4 +46,21 @@ body {
   
   a {
     color: #f9f9f9;
+<<<<<<< Updated upstream:styles/style.css
+=======
+  }
+
+  #terminal {
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    font: 1em sans-serif;
+  }
+  body {
+    background-color: black;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+>>>>>>> Stashed changes:style.css
   }
