@@ -397,7 +397,7 @@ var AsciiMorph = (function() {
   const timer = setInterval(function() {
     if (currentPercentage >= 100) {
       clearInterval(timer);
-      window.location.href = "code/new_page1.html";
+      window.location.href = "webpages/new_page.html";
       return;
     }
     currentPercentage++;

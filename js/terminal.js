@@ -1,3 +1,10 @@
+var scanlines = $('.scanlines');
+var tv = $('.tv');
+function exit() {
+    $('.tv').addClass('collapse');
+    term.disable();
+}
+
 var commandText = function(text){
   return "[[g;#EEEEEE;]" + text + "]";
 }
@@ -7,7 +14,7 @@ var titleText = function(text){
 }
 
 var hiddenLetter = function(text){
-  return "[[g;#FFC0CB;]" + text + "]";
+  return "[[g;#FF69B4;]" + text + "]";
 }
 
 var App = {
@@ -18,7 +25,7 @@ var App = {
           "You are now connected to " + commandText('SRV OS') + " - VERSION 2.1.4 \n"+
           "\n" +
           "Please type " + commandText('menu') + " for a list of commands.\n" +
-          "Note there are some " + commandText('hidden') + " commands you need to find.\n";
+          "Note there are some " + commandText('hidden') + " commands you can find!\n";
 
       if (!ret) {
           this.echo("\n" + greetText);
@@ -33,7 +40,7 @@ var App = {
       this.echo();
       this.echo("|  " + commandText("about") + "              - About the Operating System");
       this.echo("|  " + commandText("projects") + "           - Some recent projects of mine");
-      this.echo("|  " + commandText("skills") + "             - What I can do");
+      this.echo("|  " + commandText("attributes") + "         - Serval statistics");
       this.echo("|  " + commandText("awards") + "             - Awards and features for my work");
       this.echo();
       this.echo("|  " + commandText("github") + "             - Das github");
@@ -47,6 +54,78 @@ var App = {
       this.echo("|  " + commandText("all") + "                - Run all commands");
       this.echo();
   },
+
+  asciiTaka: function(){
+    this.echo(",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,\n"+
+    ",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,\n" +
+    ",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,\n"+
+    ",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,\n"+
+    ",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,  ,,,,,,,,,. ( ,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,\n"+
+    ",,,,,,,,,,,,,,,,,,,,,,,,            (%  ,,. &%//(       .,,,,,,,,,,,,,,,,,,,,,,,\n"+
+    ",,,,,,,,,,,,,.            %/////#%///////#///////////% .,,.,.,.,,,,,,,,.,,,,..,,\n"+
+    ",,,,,,.,,, %,,,*,,***,,,**,*%/////////%///////%////%(//(/         ,,,,,,,,,,,,,,\n"+
+    ",,,,,,,,, **#,.(,,***,(///////////////////////////////%*,*****,,,,,# .,,,,,.,,,,\n"+
+    ",,,, ,,, %*#....,*****,,%///////////////////////////////%*,******,*,,..,,,,.,,,,\n"+
+    ",,,,,,., /,,,.....%**%/////////////#%&///#(#////////////////%(....,*/ ,,,,,,,,,,\n"+
+    ",,,, ,,,. %*,/.*...&/////////////%,,*,,*/***,%/////////////%..//..*,% .,,  ,,,,,\n"+
+    ",,,,,,,,,, %*,,%..(/////////////#***********,*,%//////////////...%,% .,,,,,,,,,,\n"+
+    ",,,,.,,,,,,  %**%/////////////%,*****************%(/%////#%///#**,%%  .,,,,,,,,.\n"+
+    "              /%%%#///////%/%**,,**************,*@@/*,**,*,***,**#//(           \n"+
+    "           %////%%//#//%%%%*//////,*************//////*,*******,,*#/////%       \n"+
+    "           %////%%*,*,**,,*///////,***********,,////////,,**,*,**#///%%         \n"+
+    "            #////%********..,//&&/,***********,,/&&/,...******(*%//////.        \n"+
+    "               %//%*#,,**,*,..,/*.***,,*,,,***,,.//..,,*******%////%#((#        \n"+
+    "               %/////(/,,,*****,*,,,*%..@@/..%,,*,,,******,,%//////%            \n"+
+    " ..,,,,,,,,,,, &///#/(///%%**,**,,*,*,,,@@@.,*****,,,**&@@////.%%#(%            \n"+
+    ",,,,,,,,.,,,,,,   ,. #@**&/////#///###(%#%%%%#&((@//&/////%  ..,,,..,,.,,,,,,,,,\n"+
+    ",,,,,,,  .,.  ,,,, @,** @**& ,/////%@((@@////////////@(%&    %#  ,,,,,,,,,.  ,,,\n"+
+    ",,,,,,,,,,,,,,,,, @**.  **@**& (///////////********@&////(,%////%% .,,,,,,,,,,,,\n"+
+    ",,,,,,,,,, ,,,,, (,,*  **#%%/#*&#**************&(****#.(& %/&(%  /* .,,,,,,,,,,,\n"+
+    ",,,,,,,,,,,,, ,&**,.  ***%&@  /****/,%//*///@,*,*%,**%% ,,.  ,. #,,*,,.  ,,,,,,,\n"+
+    ",,,,,,,,,,,,,,,  @  ***%%%@ , &****,*&@&/@,****#*******(##(###/,,# ,,,,,,,,,,,,,\n"+
+    ",,,,,,,,,,,,,,,,,,   &%%@ ,,,, (##*/@@,.(*,**,/%#%*****%,*,*(%* ,,,,,,,,,,,,,,,,\n"+
+    ",,,,,,,,,,,,,,,,,,,,,. .,,,,,,,, *#(((%&@%**/%*(*//%#.  ,,,,,,,,,,,,,,,,,,,,,,,,\n"+
+    ",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,\n"+
+    ",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,\n"+
+    ",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,")
+},
+
+asciiKyan: function(){
+    this.echo(",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,\n"+
+    ",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,.,,,,,,,,,,,*,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,\n"+
+    ",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,*,,,,,,,,,\n"+
+    ",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,*,,,,,,,,,\n"+
+    ",,,,,,,,,,,,,,,,,,,,..&#&,,,,,. ///*..,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,\n"+
+    ",,,,,,,,,,...,,,,,,,,&##& ,,&&%%%%%%%%%%%%&#,,,,*&,,,,,,,,,,,,,,.,,,,,,,,,,,,,,,\n"+
+    ",,,,,,,,,,,,,,*,,,,,&####&@&&%%%%&&&%%%%%%%%%%& ,&%&,,,,,,,,,.&##&,,,,,,,,,,,,,,\n"+
+    ",,,,,,,,,,,,,,,,,,*,&&&(%%%%%%%%%%%%%%%&%%%%%%%%&.%%&,,,,,,,###%##&,,,,,,,,,,,,,\n"+
+    ",,,,,,,,,,,,,,,,,, &#%%%%%%%%%%%%%%%%%%%%%%%%%%%%%&%&@%%%#,%#&///#&.,,,,,,,,,,,,\n"+
+    ",,,,,,,,,,,,,,,,.&%%%%%%%%%%%%%%%%%%%%%%%%%&%%%%%%%%%%&&&&&#&////&&(,,,,,,,,,,,,\n"+
+    ",,,,,,,,,,,,,,,,,.&&%%%%%%%%%%%%%%%%%%&%%%%%%%%%%%%%%%%&#%#%//%//&#(,*,,,,,.,,,,\n"+
+    ",,,,,,,,,,,,,,,,,.,&&%%%%%%%%%%%%%&%%%%%%%%%%%%%%%%%%&&####//(#//##&,,,,,..,,,,,\n"+
+    ",,,,,,,,,,,,,....&(%%%%%%%&&%%%%%%%%%%%%%%%%%%%%%%%%%%%&#&&/////&#&(...,,,,,,,,,\n"+
+    ",,,,,,,,,,......&%%%%%%&%%%%%%%%%%%%%&%%%%&&&&&%%%%%&%%%&%&/%//&##&,.......,,,,,\n"+
+    ",,,,,,,........&%%%%%&%%%%%%%%%%%&%%%%%%&&%%%&#&%&&%&%%%&&%(/&###& ...........,,\n"+
+    ",,,,..........&(%%%%&%%%%%%%%%%%%%%%%&&&%%&#####&%&&%%%%%&/%###%%%&&,...........\n"+
+    ",,............&%&&%&%%%%%&&&&####(((&&(((#######&%&%%%%%%&###&%%%%%%&...........\n"+
+    "................&%%&%%%%%%%######((((((((#######&&&%%%%%&#&&&&%%%%&%%&&.........\n"+
+    "...............%%%%&%%%%%&# @#%@((((((((((@#######.%%%%&###&%%%%%%%%&...........\n"+
+    "..............&%&%%%%%%%&%((((((((((((((#((@@@@@,  &%%&####&%%%%%%%%%%/.........\n"+
+    ".................&&%%%&%###(((((((###(((((((((.    *% &######&%%%%%%%%&.........\n"+
+    "..................&%%&#&%%%####%&%%%%%#####(@@.. ,@@,####%&&&&%%%%%%%%&.........\n"+
+    ".................. &%&##&@%%%%%%&@%&#######@@@ .@&%%%%%%%&&&&%%%%%%%&#..........\n"+
+    "..................&%%%&##//####//#########@        %%%%%%%%%%%%%%%&*............\n"+
+    "..................%%%%%&&##############@@   #&&%&%%%%%%%%%%%%%%%%%%.. ..........\n"+
+    " .............../#%%%%%%&   .@@@@@@@ @@    &%%%%&%%%%%%%%%%%%%%%%%%%&...........\n"+
+    ".    ...  ... .###%%%%%%%%&              #&%%%%%&&%%%&%%%%%%%%%%%%%%%& . . . . .\n"+
+    "    .,  . .   ##((//(##%%##%%&@       &&%&%%%&%%%%%%%%%%%%%%%%%%%&%%%%@.   .   .\n"+
+    ",. ,.,,.  ..  ./%((((((#(#####%&%%%%%%%%%%&%%%%%%%%%%%%&%%%%&%%%%%&&%&          \n"+
+    "..,,.,.,......&(%%%%%%%((//####%%%%%%%%%%&(%%%%%%%%%%%%&/%&%%(&%%%&#. .. .,.,...\n"+
+    ".,.,,..... ../(%%%&&&#%%%%%/##%#%%%%%%%%%%&&&@%%%%%%%%&/((####/(((((#.....,.,,,.\n"+
+    ",.,,............#//((&#%%%*/###%%%%%%%%%%%%%%%%%%&&%&#((/////*****(((%.....*,,,.\n"+
+    ",*,..........  #//**/*/((/##(#%%%%%%%%%%%%%%%%%&#&(((##((((/*///****((#... ... .")
+},
+  
 
   github: function(){
       this.echo();
@@ -78,12 +157,10 @@ var App = {
       this.echo("|  Version Number: " + hiddenLetter('2.1.4'));
       this.echo("|  Serial number:  " + commandText("sRtJDi3PFk7EAFKkZzWS"));
       this.echo();
-      this.echo("|  Vocation:     I am a Full Stack Web Developer (primarily " + commandText('PHP') + ", " + commandText('Node.js') + ") and DevOps (Linux, AWS) specialist.");
-      this.echo("|                I have been coding in a commercial environment for " + commandText('over 12 years.'));
-      this.echo("|                My main weapons of choice on the front end are " + commandText('Angular.js') + " and " + commandText('jQuery.'));
-      this.echo();
-      this.echo("|  Employment:   I am currently " + commandText("freelancing") + " in the " + commandText("Sydney, NSW") + " area, but am always open to interesting opporunities of all kinds. Get in touch if you'd like to discuss a proposal!");
-      this.echo();
+      this.echo("|  History:\n" +   
+      "SRV OS came about due to Skye wanting to learn more about " + hiddenLetter('nerdy') + " things and express their love for the people who inspire them every day.\n" +
+      "At first, Skye was intimidated by the thought of learning something so complex, but they were determined to make something before " + hiddenLetter('valentines') +  " to show their love.\n" + 
+      "Skye began browising forums and looking for ideas. Slowly but surely, they learned the basics of how to write simple Jquery stuff.\n");
   },
 
   projects: function(){
@@ -97,20 +174,20 @@ var App = {
       this.echo();
   },
 
-  skills: function(){
+  attributes: function(){
       this.echo();
-      this.echo("|  " + commandText('Languages'));
+      this.echo("|  " + commandText('Physical'));
       this.echo();
-      this.echo("|  " + commandText('PHP') + "                    ##[[g;#00DE12;]#################################################]  ##");
-      this.echo("|  " + commandText('Linux') + "                  ##[[g;#42D100;]###############################################]    ##");
-      this.echo("|  " + commandText('Node.js') + "                ##[[g;#5BD100;]############################################]       ##");
-      this.echo("|  " + commandText('Javascript') + "             ##[[g;#5BD100;]############################################]       ##");
-      this.echo("|  " + commandText('CSS') + "                    ##[[g;#99D100;]#########################################]          ##");
-      this.echo("|  " + commandText('HTML5') + "                  ##[[g;#B2D100;]#######################################]            ##");
-      this.echo("|  " + commandText('MongoDB') + "                ##[[g;#D1B900;]############################]                       ##");
-      this.echo("|  " + commandText('.NET MVC (C#)') + "          ##[[g;#D16200;]###########]                                        ##");
+      this.echo("|  " + commandText('Leggy') + "                  ##[[g;#00DE12;]#################################################]  ##");
+      this.echo("|  " + commandText('Catellites') + "             ##[[g;#00DE12;]###############################################]    ##");
+      this.echo("|  " + commandText('Booper') + "                 ##[[g;#5BD100;]############################################]       ##");
+      this.echo("|  " + commandText('Pawbs') + "                  ##[[g;#5BD100;]############################################]       ##");
+      this.echo("|  " + commandText('Clawbs') + "                 ##[[g;#99D100;]#########################################]          ##");
+      this.echo("|  " + commandText('Floof Duster') + "           ##[[g;#B2D100;]#######################################]            ##");
+      this.echo("|  " + commandText('Alertness') + "              ##[[g;#D1B900;]############################]                       ##");
+      this.echo("|  " + commandText('Mow volume') + "             ##[[g;#D16200;]###########]                                        ##");
       this.echo();
-      this.echo("|  " + commandText("Frameworks and CMS"));
+      this.echo("|  " + commandText("Skills"));
       this.echo();
       this.echo("|  " + commandText('Laravel') + "                ##[[g;#42D100;]###############################################]    ##");
       this.echo("|  " + commandText('AngularJS') + "              ##[[g;#42D100;]###############################################]    ##");
@@ -132,15 +209,16 @@ var App = {
 
   contact: function(){
       this.echo();
-      this.echo("|  " + commandText("Email") + ":         ronniepyne@gmail.com");
-      this.echo("|  " + commandText("LinkedIn") + ":      http://www.linkedin.com/profile/view?id=298500285");
+      this.echo("|  " + commandText("Telegram") + ":      http://t.me/amarimew");
+      this.echo("|  " + commandText("Discord") +  ":       http://discordapp.com/users/327806928476438529");
       this.echo();
   },
 
   credits: function(){
       this.echo();
-      this.echo("|  Site built by " + commandText('Ronnie Pyne'));
-      this.echo("|  Using " + commandText('Jquery Terminal Emulator') + " by " + commandText('Jakub Jankiewicz') + ": http://terminal.jcubic.pl");
+      this.echo("|  Site built by " + commandText('Skye Wright'));
+      this.echo("|  Using " + commandText('Jquery Terminal Emulator') + " by " + commandText('Jakub Jankiewicz') + ": http://terminal.jcubic.pl") +
+      this.echo("|  Using " + commandText('Homepage Layout') + " by " + commandText('Ronnie Pyne') + ": https://github.com/perverse") +
       this.echo();
   },
 
@@ -156,7 +234,7 @@ var App = {
       this.exec('motd');
       this.exec('about');
       this.exec('projects');
-      this.exec('skills');
+      this.exec('attributes');
       this.exec('awards');
       this.exec('github');
       this.exec('linkedin');
