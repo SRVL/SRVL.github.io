@@ -39,7 +39,7 @@ var App = {
       this.echo("|  " + commandText("motd") + "               - Display Message of the Day");
       this.echo();
       this.echo("|  " + commandText("about") + "              - About SRV OS");
-      this.echo("|  " + commandText("projects") + "           - Some recent projects of mine");
+      this.echo("|  " + commandText("ascii") + "              - All about ASCII art!");
       this.echo("|  " + commandText("attributes") + "         - Serval statistics");
       this.echo("|  " + commandText("awards") + "             - Awards and features for my work");
       this.echo();
@@ -56,7 +56,7 @@ var App = {
   },
 
   valentines: function(){
-    window.open("../webpages/valentines.html"); 
+    window.open("./webpages/valentines.html"); 
 },  
 
   ASCIItaka: function(){
@@ -133,16 +133,24 @@ ASCIIbuck: function(){
 
   ascii: function(){
       this.echo();
-      this.echo("| " +hiddenLetter("ASCII") + " ar" +hiddenLetter("t") + " is " +hiddenLetter("a") + " form of digital art that uses the characters from the ASCII character set to create images.\n" + 
+      this.echo(hiddenLetter("ASCII") + " ar" +hiddenLetter("t") + " is " +hiddenLetter("a") + " form of digital art that uses the characters from the ASCII character set to create images.\n" + 
     "The simplicity of ASCII art makes it accessible to anyone with a computer.\n");
     this.echo(); 
-    this.echo("Despite its " +hiddenLetter("b") + "asic appearance, ASCII art has the power to evo" +hiddenLetter("k") + "e emotions and convey ide" +hiddenLetter("a") + "s through its imaginative " + hiddenLetter("u") + "se of lines and symbols." +
-    "Its versatility has made it popular in various forms of digital media\nincluding social media platforms instant messaging, and even email signatures.\n");  
+    this.echo("Despite its " +hiddenLetter("b") + "asic appearance, ASCII art has the power to evo" +hiddenLetter("k") + "e emotions and convey ide" +hiddenLetter("a") + "s through its imaginative " + hiddenLetter("u") + "se of lines and symbols.\n" +
+    "Its versatility has made it popular in various forms of digital media including social media platforms instant messaging, and even email signatures.\n");  
     this.echo();
-    this.echo("The " +hiddenLetter("c") + "reativity of ASCII artists never fails to impress, as they continue to find new and innovative ways to push the boundaries of what can be achieved using only ASCII characters.\n" +
+    this.echo("The " +hiddenLetter("c") + "reativity of ASCII artists never fails to impress, as they continue to find new and innovative ways to push the boundaries of what can be achieved using only ASCII.\n" +
     "Whether it's a whimsical cartoon, a " +hiddenLetter("k") + "ind portrait, or a detailed landscape, ASCII art never fails to be a source of inspiration and awe.\n");
       this.echo();
   },
+
+  nerdy: function(){
+    this.echo("<3 <3 <3 <3 <3 <3")
+    this.echo();
+    this.echo("In binary code, the word " + commandText("love") + " is represented as " + commandText("01101100 01101111 01100101") + ". If you consider each " + commandText("1") + " to be a kiss and each " + commandText("0") + " to be a hug, you can see that the message behind " + commandText("love") + " is " + commandText("kiss-hug-kiss-kiss-hug-hug-kiss.") + " So in essence, every time someone says " + commandText("I love you") + " in binary code, they're actually saying " + commandText("I kiss-hug you.") + " Isn't that nerdy and romantic all at once?");
+    this.echo();
+    this.echo("<3 <3 <3 <3 <3 <3")
+},
 
   facebook: function(){
       this.echo();
@@ -174,17 +182,6 @@ ASCIIbuck: function(){
       "Skye began browising forums and looking for ideas. Slowly but surely, they learned the basics of how to write simple Jquery stuff.\n");
   },
 
-  projects: function(){
-      this.echo();
-      this.echo("|  " + commandText('Lendlease Digital Signage DSP/CMS') + "    https://goo.gl/aZgIrW                          // Lead Developer");
-      this.echo("|  " + commandText('SimplyAskIt') + "                          http://www.simplyaskit.com.au                  // Backend Developer");
-      this.echo("|  " + commandText('Audi - Land of Quattro') + "               http://www.holler.com.au/work/audi-loq         // Backend Lead");
-      this.echo("|  " + commandText('Heineken - Open Your City') + "            http://www.holler.com.au/work/open-your-city   // Backend Lead");
-      this.echo("|  " + commandText('Betta Electrical') + "                     http://www.betta.com.au                        // Backend Developer");
-      this.echo("|  " + commandText('Baptist World Aid Australia') + "          http://www.baptistworldaid.org.au              // Backend Lead");
-      this.echo();
-  },
-
   attributes: function(){
       this.echo();
       this.echo("|  " + commandText('Physical'));
@@ -200,21 +197,21 @@ ASCIIbuck: function(){
       this.echo();
       this.echo("|  " + commandText("Skills"));
       this.echo();
-      this.echo("|  " + commandText('Laravel') + "                ##[[g;#42D100;]###############################################]    ##");
-      this.echo("|  " + commandText('AngularJS') + "              ##[[g;#42D100;]###############################################]    ##");
-      this.echo("|  " + commandText('Silverstripe') + "           ##[[g;#5BD100;]#############################################]      ##");
-      this.echo("|  " + commandText('Sails.js') + "               ##[[g;#99D100;]#########################################]          ##");
-      this.echo("|  " + commandText('Express') + "                ##[[g;#B2D100;]########################################]           ##");
-      this.echo("|  " + commandText('Symfony') + "                ##[[g;#D1B900;]################################]                   ##");
-      this.echo("|  " + commandText('Zend Framework') + "         ##[[g;#D1B900;]############################]                       ##");
+      this.echo("|  " + commandText('Mental Health') + "          ##[[g;#42D100;]###############################################]    ##");
+      this.echo("|  " + commandText('Cooking') + "                ##[[g;#42D100;]###############################################]    ##");
+      this.echo("|  " + commandText('Hugs') + "                   ##[[g;#5BD100;]#############################################]      ##");
+      this.echo("|  " + commandText('Sassiness') + "              ##[[g;#99D100;]#########################################]          ##");
+      this.echo("|  " + commandText('Music Snobbery') + "         ##[[g;#B2D100;]########################################]           ##");
+      this.echo("|  " + commandText('Stremches') + "              ##[[g;#D1B900;]################################]                   ##");
+      this.echo("|  " + commandText('Multi-tasking') + "          ##[[g;#D1B900;]############################]                       ##");
       this.echo();
-      this.echo("|  " + commandText("Other"));
+      this.echo("|  " + commandText("Romance"));
       this.echo();
-      this.echo("|  " + commandText('AWS') + "                    ##[[g;#5BD100;]############################################]       ##");
-      this.echo("|  " + commandText('Grunt/Gulp') + "             ##[[g;#B2D100;]#######################################]            ##");
-      this.echo("|  " + commandText('Virtualbox') + "             ##[[g;#B2D100;]#######################################]            ##");
-      this.echo("|  " + commandText('Docker') + "                 ##[[g;#B2D100;]#####################################]              ##");
-      this.echo("|  " + commandText('Vagrant') + "                ##[[g;#D13F00;]#########]                                          ##");
+      this.echo("|  " + commandText('Smoochability') + "          ##[[g;#5BD100;]############################################]       ##");
+      this.echo("|  " + commandText('Butt Quality') + "           ##[[g;#B2D100;]#######################################]            ##");
+      this.echo("|  " + commandText('Massage Skills') + "         ##[[g;#B2D100;]#######################################]            ##");
+      this.echo("|  " + commandText('Flexibility') + "            ##[[g;#B2D100;]#####################################]              ##");
+      this.echo("|  " + commandText('Body Odour') + "             ##[[g;#D13F00;]#########]                                          ##");
       this.echo();
   },
 
