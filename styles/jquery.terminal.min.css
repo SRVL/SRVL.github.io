@@ -21,6 +21,10 @@
     --color: rgba(54, 189, 54, 0.99);
   }
 
+  .teminal img {
+    max-width: 100%;
+  }
+
 /*
  * CSS Credits:
  *  the starting point http://js13kgames.com/entries/lost-in-cyberspace

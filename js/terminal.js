@@ -222,6 +222,17 @@ ASCIIbuck: function(){
       this.echo();
   },
 
+    echo: function(text) {
+        this.echo(text, {
+           raw: true,
+           finalize: function(div) {
+              div.css({
+                 "text-align": "center"
+                });
+            }
+        });
+    },
+
   credits: function(){
       this.echo();
       this.echo("|  Site built by " + commandText('Skye Wright'));
