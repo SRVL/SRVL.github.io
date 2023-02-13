@@ -100,10 +100,10 @@ var App = {
       "I smile when I think about you",
       "I'm excited for our future adventures!",
       "You're incredibly huggable.",
-      "*hand u a sparkly " + hiddenLetter("trophy")
+      "*hands u a sparkly " + hiddenLetter("trophy")
     ];
   
-    return hiddenLetter(messages[Math.floor(Math.random() * messages.length)]);
+    return messages[Math.floor(Math.random() * messages.length)];
     },
 
     pride: function() {
