@@ -54,6 +54,9 @@ var App = {
   },
 
   prompt: function(name) {
+    if name == null {
+      this.echo("Please enter a name");
+    }else
     this.typing('prompt', 100, name + '>', function() {
     });
          
@@ -269,6 +272,7 @@ ASCIIbuck: function(){
       this.clear();
       this.exec('motd');
       this.exec('about');
+      this.exec('ascii');
       this.exec('attributes');
       this.exec('contact');
       this.exec('credits');
