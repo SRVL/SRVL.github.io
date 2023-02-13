@@ -326,7 +326,7 @@ ASCIIbuck: function(){
   complete: function(){
     let username = prompt("Please confirm your Telegram username without the @, this is case sensitive.");
     if (username == "ConstellationCollie") {
-      window.location.href = "https://www.dropbox.com/s/fuvqhq69pom88h/srvl-jakob-certificate.png?dl=0";
+      window.location.href = "https://www.dropbox.com/s/f4uvqhq69pom88h/srvl-jakob-certificate.png?dl=0";
   } else if (username == "Takalion") {
     window.location.href = "https://www.dropbox.com/s/u7h3jjdeyugkpy0/srvl-taka-certificate.png?dl=0";
   } else {
