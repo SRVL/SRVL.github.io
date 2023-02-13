@@ -22,7 +22,7 @@ var App = {
   motd: function(ret){
       if (typeof ret === 'undefined') ret = false;
       var greetText = 
-          "You are now connected to " + commandText('SRV OS') + " - VERSION 2.1.4 \n"+
+          "You are now connected to " + commandText('SRV OS') + " - VERSION 2.14 \n"+
           "\n" +
           "Please type " + commandText('menu') + " for a list of commands.\n" +
           "Note there are some " + commandText('hidden') + " commands you can find!\n";
@@ -34,6 +34,7 @@ var App = {
       }
   },
 
+
   menu: function(){
       this.echo();
       this.echo("|  " + commandText("motd") + "               - Display Message of the Day");
@@ -41,12 +42,9 @@ var App = {
       this.echo("|  " + commandText("about") + "              - About SRV OS");
       this.echo("|  " + commandText("ascii") + "              - All about ASCII art!");
       this.echo("|  " + commandText("attributes") + "         - Serval statistics");
-      this.echo("|  " + commandText("awards") + "             - Awards and features for my work");
+      this.echo("|  " + commandText("prompt") + "             - Type prompt plus your name to change the prompt");
+      this.echo("|  " + commandText("clear") + "              - Clear the terminal");
       this.echo();
-      this.echo("|  " + commandText("github") + "             - Das github");
-      this.echo("|  " + commandText("linkedin") + "           - How I connect for work things");
-      this.echo("|  " + commandText("facebook") + "           - My personal social area");
-      this.echo("|  " + commandText("twitter") + "            - When 140 characters is enough");
       this.echo();
       this.echo("|  " + commandText("contact") + "            - Contact me")
       this.echo("|  " + commandText("credits") + "            - Credits for this website");
@@ -55,9 +53,61 @@ var App = {
       this.echo();
   },
 
-  valentines: function(){
-    window.open("./webpages/valentines.html"); 
-},  
+  prompt: function(name) {
+    this.typing('prompt', 100, name + '>', function() {
+    });
+         
+  },
+
+  Leggy: function() {
+    const img = $('<img src="https://files.botsin.space/media_attachments/files/109/816/233/582/679/971/original/fa9babb8af64601c.jpg">');
+    this.echo(img);
+    },
+
+    
+
+  2.14: function() {
+    const messages = [
+      "You light up my life.",
+      "Being with you makes me a better person.",
+      "I appreciate how much effort you put into making me feel valued and respected.",
+      "I do a little wiggle when I think about you.",
+      "You are inspiring!",
+      "I smile when I think about you",
+      "I'm excited for our future adventures!",
+      "You're incredibly huggable."
+    ];
+  
+    return hiddenLetter(messages[Math.floor(Math.random() * messages.length)]);
+    },
+
+    pride: function() {
+        
+        flags = [ 
+            "[[g;#FF218C;]#############################\n" +
+            "[[g;#FFD800;]#############################\n" +
+            "[[g;#21B1FF;]#############################\n",
+
+            "[[g;#FFF430;]#############################\n" +
+            "[[g;#FFFFFF;]#############################\n" +
+            "[[g;#9D59D2;]#############################\n" +
+            "[[g;#000000;]#############################\n",
+
+            "[[g;#E40002;]#############################\n" +
+            "[[g;#FF8B00;]#############################\n" +
+            "[[g;#FEED01;]#############################\n" +
+            "[[g;#027F23;]#############################\n" +
+            "[[g;#004DFF;]#############################\n" +
+            "[[g;#750689;]#############################\n",
+
+            "[[g;#5BCEFA;]#############################\n" +
+            "[[g;#F5A8B8;]#############################\n" +
+            "[[g;#FFFFFF;]#############################\n" +
+            "[[g;#F5A8B8;]#############################\n" +
+            "[[g;#5BCEFA;]#############################\n"
+        ];
+        return flags[Math.floor(Math.random() * flags.length)];
+    },
 
   ASCIItaka: function(){
     this.echo(",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,\n"+
@@ -144,49 +194,34 @@ ASCIIbuck: function(){
       this.echo();
   },
 
+  
+
   nerdy: function(){
     this.echo("<3 <3 <3 <3 <3 <3")
     this.echo();
-    this.echo("In binary code, the word " + commandText("love") + " is represented as " + commandText("01101100 01101111 01100101") + ". If you consider each " + commandText("1") + " to be a kiss and each " + commandText("0") + " to be a hug, you can see that the message behind " + commandText("love") + " is " + commandText("kiss-hug-kiss-kiss-hug-hug-kiss.") + " So in essence, every time someone says " + commandText("I love you") + " in binary code, they're actually saying " + commandText("I kiss-hug you.") + " Isn't that nerdy and romantic all at once?");
+    this.echo("In binary code, the word " + commandText("love") + " is represented as " + commandText("01101100 01101111 01100101") + ". If you consider each " + commandText("1") + " to be a kiss and each " + commandText("0") + " to be a hug, you can see that the message behind " + commandText("love") + " is " + commandText("kiss-hug-kiss-kiss-hug-hug-kiss.\n") + "So in essence, every time someone says " + commandText("I love you") + " in binary code, they're actually saying " + commandText("I kiss-hug you.\n") + "\nIsn't that nerdy and romantic all at once?");
     this.echo();
     this.echo("<3 <3 <3 <3 <3 <3")
 },
 
-  facebook: function(){
-      this.echo();
-      this.echo("|  http://www.facebook.com/perverse");
-      this.echo();
-  },
-
-  linkedin: function(){
-      this.echo();
-      this.echo("|  https://www.linkedin.com/profile/view?id=298500285");
-      this.echo();
-  },
-
-  twitter: function(){
-      this.echo();
-      this.echo("|  http://www.twitter.com/perverse_8P");
-      this.echo();
-  },
-
   about: function(){
       this.echo();
       this.echo("|  Product Name:   " + commandText('SRV OS'));
-      this.echo("|  Version Number: " + hiddenLetter('2.1.4'));
+      this.echo("|  Version Number: " + hiddenLetter('2.14'));
       this.echo("|  Serial number:  " + commandText("sRtJDi3PFk7EAFKkZzWS"));
       this.echo();
       this.echo("|  History:\n" +   
       "SRV OS came about due to Skye wanting to learn more about " + hiddenLetter('nerdy') + " things and express their love for the people who inspire them every day.\n" +
-      "At first, Skye was intimidated by the thought of learning something so complex, but they were determined to make something before " + hiddenLetter('valentines') +  " to show their love.\n" + 
-      "Skye began browising forums and looking for ideas. Slowly but surely, they learned the basics of how to write simple Jquery stuff.\n");
+      "At first, Skye was intimidated by the thought of learning something so complex, but they were determined to make something before valentines to show their love.\n" + 
+      "Skye began browising forums and looking for ideas. Slowly but surely, they learned the basics of how to write simple Jquery stuff.\n" +
+      "\nThey've taken great " + hiddenLetter('pride') + " in creating this, and hope that you enjoy it as much as they enjoyed making it.\n");
   },
 
   attributes: function(){
       this.echo();
       this.echo("|  " + commandText('Physical'));
       this.echo();
-      this.echo("|  " + commandText('Leggy') + "                  ##[[g;#00DE12;]#################################################]  ##");
+      this.echo("|  " + hiddenLetter('Leggy') + "                 ##[[g;#00DE12;]#################################################]  ##");
       this.echo("|  " + commandText('Catellites') + "             ##[[g;#00DE12;]###############################################]    ##");
       this.echo("|  " + commandText('Booper') + "                 ##[[g;#5BD100;]############################################]       ##");
       this.echo("|  " + commandText('Pawbs') + "                  ##[[g;#5BD100;]############################################]       ##");
@@ -222,17 +257,6 @@ ASCIIbuck: function(){
       this.echo();
   },
 
-    echo: function(text) {
-        this.echo(text, {
-           raw: true,
-           finalize: function(div) {
-              div.css({
-                 "text-align": "center"
-                });
-            }
-        });
-    },
-
   credits: function(){
       this.echo();
       this.echo("|  Site built by " + commandText('Skye Wright'));
@@ -241,24 +265,11 @@ ASCIIbuck: function(){
       this.echo();
   },
 
-  awards: function(){
-      this.echo();
-      this.echo("|  " + commandText('FWA Site of the Day') + ", 24th September 2013   | Audi - Land of Quattro                http://www.thefwa.com/site/audi-australia-land-of-quattro");
-      this.echo("|  " + commandText('Google Sandbox') + "                             | Audi - Land of Quattro                http://www.thinkwithgoogle.com/campaigns/audi-australia-land-of-quattro.html");
-      this.echo();
-  },
-
   all: function(){
       this.clear();
       this.exec('motd');
       this.exec('about');
-      this.exec('projects');
       this.exec('attributes');
-      this.exec('awards');
-      this.exec('github');
-      this.exec('linkedin');
-      this.exec('facebook');
-      this.exec('twitter');
       this.exec('contact');
       this.exec('credits');
   },
