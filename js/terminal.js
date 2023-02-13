@@ -17,6 +17,8 @@ var hiddenLetter = function(text){
   return "[[g;#FF69B4;]" + text + "]";
 }
 
+var hiddencount = [];
+
 var App = {
 
   motd: function(ret){
@@ -25,7 +27,7 @@ var App = {
           "You are now connected to " + commandText('SRV OS') + " - VERSION 2.14 \n"+
           "\n" +
           "Please type " + commandText('menu') + " for a list of commands.\n" +
-          "Note there are some " + hiddenLetter('hidden') + " commands you can find!\n";
+          "\nYou have found " + hiddenLetter(hiddencount.length + " of 5 ") + "hidden commands so far!\n";
 
       if (!ret) {
           this.echo("\n" + greetText);
@@ -63,6 +65,7 @@ var App = {
   },
 
   Leggy: function() {
+    hiddencount.push("Leggy");
     const img = $('<img src="https://files.botsin.space/media_attachments/files/109/816/233/582/679/971/original/fa9babb8af64601c.jpg">');
     this.echo(img);
     },
@@ -70,6 +73,7 @@ var App = {
     
 
   2.14: function() {
+    hiddencount.push("2.14");
     const messages = [
       "You light up my life.",
       "Being with you makes me a better person.",
@@ -85,6 +89,7 @@ var App = {
     },
 
     pride: function() {
+      hiddencount.push("pride");
         
         flags = [ 
             "[[g;#FF218C;]#############################\n" +
@@ -113,6 +118,7 @@ var App = {
     },
 
   ASCIItaka: function(){
+    hiddencount.push("ASCII");
     this.echo(",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,\n"+
     ",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,\n" +
     ",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,\n"+
@@ -148,6 +154,7 @@ var App = {
 },
 
 ASCIIbuck: function(){
+  hiddencount.push("ASCII");
     this.echo(",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,\n"+
     ",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,.,,,,,,,,,,,*,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,\n"+
     ",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,*,,,,,,,,,\n"+
@@ -200,6 +207,8 @@ ASCIIbuck: function(){
   
 
   nerdy: function(){
+    hiddencount.push("Nerdy");
+
     this.echo("<3 <3 <3 <3 <3 <3")
     this.echo();
     this.echo("In binary code, the word " + commandText("love") + " is represented as " + commandText("01101100 01101111 01100101") + ". If you consider each " + commandText("1") + " to be a kiss and each " + commandText("0") + " to be a hug, you can see that the message behind " + commandText("love") + " is " + commandText("kiss-hug-kiss-kiss-hug-hug-kiss.\n") + "So in essence, every time someone says " + commandText("I love you") + " in binary code, they're actually saying " + commandText("I kiss-hug you.\n") + "\nIsn't that nerdy and romantic all at once?");
