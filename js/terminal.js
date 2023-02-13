@@ -25,7 +25,7 @@ var App = {
           "You are now connected to " + commandText('SRV OS') + " - VERSION 2.14 \n"+
           "\n" +
           "Please type " + commandText('menu') + " for a list of commands.\n" +
-          "Note there are some " + commandText('hidden') + " commands you can find!\n";
+          "Note there are some " + hiddenLetter('hidden') + " commands you can find!\n";
 
       if (!ret) {
           this.echo("\n" + greetText);
