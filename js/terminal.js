@@ -1,5 +1,7 @@
 var scanlines = $('.scanlines');
+
 var tv = $('.tv');
+
 function exit() {
     $('.tv').addClass('collapse');
     term.disable();
@@ -17,7 +19,7 @@ var hiddenLetter = function(text){
   return "[[g;#FF69B4;]" + text + "]";
 }
 
-var hiddencount = [];
+var hiddenCount = [];
 
 var App = {
 
@@ -27,7 +29,7 @@ var App = {
           "You are now connected to " + commandText('SRV OS') + " - VERSION 2.14 \n"+
           "\n" +
           "Please type " + commandText('menu') + " for a list of commands.\n" +
-          "\nYou have found " + hiddenLetter(hiddencount.length + " of 5 ") + "hidden commands so far!\n";
+          "\nYou have found " + hiddenLetter(hiddenCount.length + " of 5 ") + "hidden commands so far!\n";
 
       if (!ret) {
           this.echo("\n" + greetText);
@@ -65,7 +67,15 @@ var App = {
   },
 
   Leggy: function() {
-    hiddencount.push("Leggy");
+    if (!hiddenCount.includes("Leggy")){
+      hiddenCount.push("Leggy");
+      this.echo("\nYou have found " + hiddenLetter(hiddenCount.length + " of 5 ") + "hidden commands so far!\n");
+    }
+       
+    if (hiddenCount.length == 5){
+      this.echo("You have found all the hidden commands! You can now use the " + hiddenLetter("complete") + " command!");
+    }
+
     const img = $('<img src="https://files.botsin.space/media_attachments/files/109/816/233/582/679/971/original/fa9babb8af64601c.jpg">');
     this.echo(img);
     },
@@ -73,7 +83,15 @@ var App = {
     
 
   2.14: function() {
-    hiddencount.push("2.14");
+    if (!hiddenCount.includes("2.14")){
+      hiddenCount.push("2.14");
+      this.echo("\nYou have found " + hiddenLetter(hiddenCount.length + " of 5 ") + "hidden commands so far!\n");
+    }
+        
+    if (hiddenCount.length == 5){
+      this.echo("You have found all the hidden commands! You can now use the " + hiddenLetter("complete") + " command!");
+    }
+
     const messages = [
       "You light up my life.",
       "Being with you makes me a better person.",
@@ -89,8 +107,14 @@ var App = {
     },
 
     pride: function() {
-      hiddencount.push("pride");
-        
+      if (!hiddenCount.includes("pride")){
+        hiddenCount.push("pride");
+        this.echo("\nYou have found " + hiddenLetter(hiddenCount.length + " of 5 ") + "hidden commands so far!\n");
+      }
+          
+    if (hiddenCount.length == 5){
+      this.echo("You have found all the hidden commands! You can now use the " + hiddenLetter("complete") + " command!");
+    }
         flags = [ 
             "[[g;#FF218C;]#############################\n" +
             "[[g;#FFD800;]#############################\n" +
@@ -118,7 +142,14 @@ var App = {
     },
 
   ASCIItaka: function(){
-    hiddencount.push("ASCII");
+    if (!hiddenCount.includes("ascii")){
+      hiddenCount.push("ascii");
+      this.echo("\nYou have found " + hiddenLetter(hiddenCount.length + " of 5 ") + "hidden commands so far!\n");
+    }    
+    if (hiddenCount.length == 5){
+      this.echo("You have found all the hidden commands! You can now use the " + hiddenLetter("complete") + " command!");
+    }
+    
     this.echo(",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,\n"+
     ",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,\n" +
     ",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,\n"+
@@ -154,7 +185,15 @@ var App = {
 },
 
 ASCIIbuck: function(){
-  hiddencount.push("ASCII");
+  if (!hiddenCount.includes("ascii")){
+    hiddenCount.push("ascii");
+    this.echo("\nYou have found " + hiddenLetter(hiddenCount.length + " of 5 ") + "hidden commands so far!\n");
+  }
+      
+  if (hiddenCount.length == 5){
+    this.echo("You have found all the hidden commands! You can now use the " + hiddenLetter("complete") + " command!");
+  }
+
     this.echo(",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,\n"+
     ",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,.,,,,,,,,,,,*,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,\n"+
     ",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,*,,,,,,,,,\n"+
@@ -207,7 +246,14 @@ ASCIIbuck: function(){
   
 
   nerdy: function(){
-    hiddencount.push("Nerdy");
+    if (!hiddenCount.includes("nerdy")){
+      hiddenCount.push("nerdy");
+      this.echo("\nYou have found " + hiddenLetter(hiddenCount.length + " of 5 ") + "hidden commands so far!\n");
+    }
+    
+    if (hiddenCount.length == 5){
+      this.echo("You have found all the hidden commands! You can now use the " + hiddenLetter("complete") + " command!");
+    }
 
     this.echo("<3 <3 <3 <3 <3 <3")
     this.echo();
@@ -275,6 +321,17 @@ ASCIIbuck: function(){
       this.echo("|  Using " + commandText('Jquery Terminal Emulator') + " by " + commandText('Jakub Jankiewicz') + ": http://terminal.jcubic.pl") +
       this.echo("|  Using " + commandText('Homepage Layout') + " by " + commandText('Ronnie Pyne') + ": https://github.com/perverse") +
       this.echo();
+  },
+
+  complete: function(){
+    let username = prompt("Please confirm your Telegram username without the @, this is case sensitive.");
+    if (username == "ConstellationCollie") {
+      window.location.href = "https://www.dropbox.com/s/fuvqhq69pom88h/srvl-jakob-certificate.png?dl=0";
+  } else if (username == "Takalion") {
+    window.location.href = "https://www.dropbox.com/s/u7h3jjdeyugkpy0/srvl-taka-certificate.png?dl=0";
+  } else {
+    this.echo ("Good job! You've found the secret command, but you don't have the right username.");
+  }
   },
 
   all: function(){
