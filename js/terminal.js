@@ -29,7 +29,7 @@ var App = {
           "You are now connected to " + commandText('SRV OS') + " - VERSION 2.14 \n"+
           "\n" +
           "Please type " + commandText('menu') + " for a list of commands.\n" +
-          "\nYou have found " + hiddenLetter(hiddenCount.length + " of 5 ") + "hidden commands so far!\n";
+          "\nYou have found " + hiddenLetter(hiddenCount.length + " of 6 ") + "hidden commands so far!\n";
 
       if (!ret) {
           this.echo("\n" + greetText);
@@ -48,7 +48,6 @@ var App = {
       this.echo("|  " + commandText("attributes") + "         - Serval statistics");
       this.echo("|  " + commandText("prompt") + "             - Type prompt plus your name to change the prompt");
       this.echo("|  " + commandText("clear") + "              - Clear the terminal");
-      this.echo();
       this.echo();
       this.echo("|  " + commandText("contact") + "            - Contact me")
       this.echo("|  " + commandText("credits") + "            - Credits for this website");
@@ -69,11 +68,11 @@ var App = {
   Leggy: function() {
     if (!hiddenCount.includes("Leggy")){
       hiddenCount.push("Leggy");
-      this.echo("\nYou have found " + hiddenLetter(hiddenCount.length + " of 5 ") + "hidden commands so far!\n");
+      this.echo("\nYou have found " + hiddenLetter(hiddenCount.length + " of 6 ") + "hidden commands so far!\n");
     }
        
     if (hiddenCount.length == 5){
-      this.echo("You have found all the hidden commands! You can now use the " + hiddenLetter("complete") + " command!");
+      this.echo("You have found enough hidden commands! You can now use the " + hiddenLetter("complete") + " command!");
     }
 
     const img = $('<img src="https://files.botsin.space/media_attachments/files/109/816/233/582/679/971/original/fa9babb8af64601c.jpg">');
@@ -85,11 +84,11 @@ var App = {
   2.14: function() {
     if (!hiddenCount.includes("2.14")){
       hiddenCount.push("2.14");
-      this.echo("\nYou have found " + hiddenLetter(hiddenCount.length + " of 5 ") + "hidden commands so far!\n");
+      this.echo("\nYou have found " + hiddenLetter(hiddenCount.length + " of 6 ") + "hidden commands so far!\n");
     }
         
     if (hiddenCount.length == 5){
-      this.echo("You have found all the hidden commands! You can now use the " + hiddenLetter("complete") + " command!");
+      this.echo("You have found enough hidden commands! You can now use the " + hiddenLetter("complete") + " command!");
     }
 
     const messages = [
@@ -109,12 +108,12 @@ var App = {
     pride: function() {
       if (!hiddenCount.includes("pride")){
         hiddenCount.push("pride");
-        this.echo("\nYou have found " + hiddenLetter(hiddenCount.length + " of 5 ") + "hidden commands so far!\n");
+        this.echo("\nYou have found " + hiddenLetter(hiddenCount.length + " of 6 ") + "hidden commands so far!\n");
       }
           
-    if (hiddenCount.length == 5){
-      this.echo("You have found all the hidden commands! You can now use the " + hiddenLetter("complete") + " command!");
-    }
+      if (hiddenCount.length == 5){
+        this.echo("You have found enough hidden commands! You can now use the " + hiddenLetter("complete") + " command!");
+      }
         flags = [ 
             "[[g;#FF218C;]#############################\n" +
             "[[g;#FFD800;]#############################\n" +
@@ -144,10 +143,10 @@ var App = {
   ASCIItaka: function(){
     if (!hiddenCount.includes("ascii")){
       hiddenCount.push("ascii");
-      this.echo("\nYou have found " + hiddenLetter(hiddenCount.length + " of 5 ") + "hidden commands so far!\n");
+      this.echo("\nYou have found " + hiddenLetter(hiddenCount.length + " of 6 ") + "hidden commands so far!\n");
     }    
     if (hiddenCount.length == 5){
-      this.echo("You have found all the hidden commands! You can now use the " + hiddenLetter("complete") + " command!");
+      this.echo("You have found enough hidden commands! You can now use the " + hiddenLetter("complete") + " command!");
     }
     
     this.echo(",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,\n"+
@@ -187,11 +186,11 @@ var App = {
 ASCIIbuck: function(){
   if (!hiddenCount.includes("ascii")){
     hiddenCount.push("ascii");
-    this.echo("\nYou have found " + hiddenLetter(hiddenCount.length + " of 5 ") + "hidden commands so far!\n");
+    this.echo("\nYou have found " + hiddenLetter(hiddenCount.length + " of 6 ") + "hidden commands so far!\n");
   }
       
   if (hiddenCount.length == 5){
-    this.echo("You have found all the hidden commands! You can now use the " + hiddenLetter("complete") + " command!");
+    this.echo("You have found enough hidden commands! You can now use the " + hiddenLetter("complete") + " command!");
   }
 
     this.echo(",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,\n"+
@@ -243,16 +242,14 @@ ASCIIbuck: function(){
       this.echo();
   },
 
-  
-
   nerdy: function(){
     if (!hiddenCount.includes("nerdy")){
       hiddenCount.push("nerdy");
-      this.echo("\nYou have found " + hiddenLetter(hiddenCount.length + " of 5 ") + "hidden commands so far!\n");
+      this.echo("\nYou have found " + hiddenLetter(hiddenCount.length + " of 6 ") + "hidden commands so far!\n");
     }
     
     if (hiddenCount.length == 5){
-      this.echo("You have found all the hidden commands! You can now use the " + hiddenLetter("complete") + " command!");
+      this.echo("You have found enough hidden commands! You can now use the " + hiddenLetter("complete") + " command!");
     }
 
     this.echo("<3 <3 <3 <3 <3 <3")
@@ -274,6 +271,20 @@ ASCIIbuck: function(){
       "Skye began browising forums and looking for ideas. Slowly but surely, they learned the basics of how to write simple Jquery stuff.\n" +
       "\nThey've taken great " + hiddenLetter('pride') + " in creating this, and hope that you enjoy it as much as they enjoyed making it.\n");
   },
+
+  trophy: function(){
+    if (!hiddenCount.includes("trophy")){
+      hiddenCount.push("trophy");
+      this.echo("\nYou have found " + hiddenLetter(hiddenCount.length + " of 6 ") + "hidden commands so far!\n");
+      
+      if (hiddenCount.length == 5){
+        this.echo("You have found enough hidden commands! You can now use the " + hiddenLetter("complete") + " command!");
+      }
+
+    this.echo('[[@;;;;https://images.squarespace-cdn.com/content/62418744eb964176d3b7c908/51769803-e090-4775-b1aa-6acc5d97676a/IMG_0123.PNG?content-type=image%2Fpng]]');
+    this.echo('Image by @builtbyaxel on Twitter');
+  }
+},
 
   attributes: function(){
       this.echo();
