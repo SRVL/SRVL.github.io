@@ -54,7 +54,7 @@ var App = {
   },
 
   prompt: function(name) {
-    if name == null {
+    if(name === null) {
       this.echo("Please enter a name");
     }else
     this.typing('prompt', 100, name + '>', function() {
