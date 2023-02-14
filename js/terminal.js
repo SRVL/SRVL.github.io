@@ -100,7 +100,7 @@ var App = {
       "I smile when I think about you",
       "I'm excited for our future adventures!",
       "You're incredibly huggable.",
-      "*hands u a sparkly " + hiddenLetter("trophy") + "*"
+      "*hands u a sparkly " + hiddenLetter("trophy") + "*",
     ];
   
     return messages[Math.floor(Math.random() * messages.length)];
