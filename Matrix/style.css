@@ -1,0 +1,17 @@
+body {
+  background: black;
+  margin: 0;
+  min-width: 100vw;
+  min-height: 100vh;
+  overflow: hidden;
+}
+canvas {
+  display: block;
+  margin: 0;
+  transform: scaleX(-1);
+}
+#return {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+}

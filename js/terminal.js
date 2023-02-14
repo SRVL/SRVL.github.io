@@ -46,8 +46,9 @@ var App = {
       this.echo("|  " + commandText("about") + "              - About SRV OS");
       this.echo("|  " + commandText("ascii") + "              - All about ASCII art!");
       this.echo("|  " + commandText("attributes") + "         - Serval statistics");
-      this.echo("|  " + commandText("prompt") + "             - Type prompt plus your name to change the prompt");
       this.echo("|  " + commandText("clear") + "              - Clear the terminal");
+      this.echo("|  " + commandText("coderain") + "           - The Matrix has you...");
+      this.echo("|  " + commandText("prompt") + "             - Type prompt plus your name to change the prompt");
       this.echo();
       this.echo("|  " + commandText("contact") + "            - Contact me")
       this.echo("|  " + commandText("credits") + "            - Credits for this website");
@@ -77,6 +78,10 @@ var App = {
 
     const img = $('<img src="https://files.botsin.space/media_attachments/files/109/816/233/582/679/971/original/fa9babb8af64601c.jpg">');
     this.echo(img);
+    },
+
+    coderain: function() {
+      window.location.href = "../Matrix/index.html";
     },
 
     
