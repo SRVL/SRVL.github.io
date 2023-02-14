@@ -342,8 +342,8 @@ ASCIIbuck: function(){
 
   complete: function(){
       if (hiddenCount >= 5) {
-            let username = prompt("Please confirm your Telegram username without the @, this is case sensitive.");
-            if (username == "ConstellationCollie") {
+        let username = prompt("Please confirm your Telegram username without the @, this is case sensitive.");
+        if (username == "ConstellationCollie") {
                 window.location.href = "https://www.dropbox.com/s/f4uvqhq69pom88h/srvl-jakob-certificate.png?dl=0";
             } else if (username == "Takalion") {
                 window.location.href = "https://www.dropbox.com/s/u7h3jjdeyugkpy0/srvl-taka-certificate.png?dl=0";
@@ -351,6 +351,9 @@ ASCIIbuck: function(){
                 this.echo ("Good job! You've found the secret command, but you don't have the right username.");
             }
             }
+      else {
+          this.echo("ACCESS DENIED: You have not found enough commands.");
+      }
   },
 
   all: function(){
