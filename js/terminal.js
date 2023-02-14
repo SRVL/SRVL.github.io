@@ -291,7 +291,7 @@ ASCIIbuck: function(){
       this.echo();
       this.echo("|  " + commandText('Physical'));
       this.echo();
-      this.echo("|  " + hiddenLetter('Leggy') + "                  ##[[g;#00DE12;]#################################################]  ##");
+      this.echo("|  " + hiddenLetter('Leggy') + "                 ##[[g;#00DE12;]###############################################]    ##");
       this.echo("|  " + commandText('Catellites') + "             ##[[g;#00DE12;]###############################################]    ##");
       this.echo("|  " + commandText('Booper') + "                 ##[[g;#5BD100;]############################################]       ##");
       this.echo("|  " + commandText('Pawbs') + "                  ##[[g;#5BD100;]############################################]       ##");
