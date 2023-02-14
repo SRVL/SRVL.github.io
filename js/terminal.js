@@ -327,8 +327,8 @@ ASCIIbuck: function(){
 
   contact: function(){
       this.echo();
-      this.echo("|  " + commandText("Telegram") + ":      http://t.me/amarimew");
-      this.echo("|  " + commandText("Discord") +  ":       http://discordapp.com/users/327806928476438529");
+      this.echo("|  " + commandText("Telegram") + ":      Removed as posted online for others.");
+      this.echo("|  " + commandText("Discord") +  ":       Removed as posted online for others.");
       this.echo();
   },
 
