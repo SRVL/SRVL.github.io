@@ -72,7 +72,7 @@ var App = {
       this.echo("\nYou have found " + hiddenLetter(hiddenCount.length + " of 6 ") + "hidden commands so far!\n");
     }
        
-    if (hiddenCount.length == 5){
+    if (hiddenCount.length >= 5){
       this.echo("You have found enough hidden commands! You can now use the " + hiddenLetter("complete") + " command!");
     }
 
@@ -92,7 +92,7 @@ var App = {
       this.echo("\nYou have found " + hiddenLetter(hiddenCount.length + " of 6 ") + "hidden commands so far!\n");
     }
         
-    if (hiddenCount.length == 5){
+    if (hiddenCount.length >= 5){
       this.echo("You have found enough hidden commands! You can now use the " + hiddenLetter("complete") + " command!");
     }
 
@@ -117,7 +117,7 @@ var App = {
         this.echo("\nYou have found " + hiddenLetter(hiddenCount.length + " of 6 ") + "hidden commands so far!\n");
       }
           
-      if (hiddenCount.length == 5){
+      if (hiddenCount.length >= 5){
         this.echo("You have found enough hidden commands! You can now use the " + hiddenLetter("complete") + " command!");
       }
         flags = [ 
@@ -151,7 +151,7 @@ var App = {
       hiddenCount.push("ascii");
       this.echo("\nYou have found " + hiddenLetter(hiddenCount.length + " of 6 ") + "hidden commands so far!\n");
     }    
-    if (hiddenCount.length == 5){
+    if (hiddenCount.length >= 5){
       this.echo("You have found enough hidden commands! You can now use the " + hiddenLetter("complete") + " command!");
     }
     
@@ -195,7 +195,7 @@ ASCIIbuck: function(){
     this.echo("\nYou have found " + hiddenLetter(hiddenCount.length + " of 6 ") + "hidden commands so far!\n");
   }
       
-  if (hiddenCount.length == 5){
+  if (hiddenCount.length >= 5){
     this.echo("You have found enough hidden commands! You can now use the " + hiddenLetter("complete") + " command!");
   }
 
@@ -254,7 +254,7 @@ ASCIIbuck: function(){
       this.echo("\nYou have found " + hiddenLetter(hiddenCount.length + " of 6 ") + "hidden commands so far!\n");
     }
     
-    if (hiddenCount.length == 5){
+    if (hiddenCount.length >= 5){
       this.echo("You have found enough hidden commands! You can now use the " + hiddenLetter("complete") + " command!");
     }
 
@@ -283,7 +283,7 @@ ASCIIbuck: function(){
       hiddenCount.push("trophy");
       this.echo("\nYou have found " + hiddenLetter(hiddenCount.length + " of 6 ") + "hidden commands so far!\n");
       
-      if (hiddenCount.length == 5){
+      if (hiddenCount.length >= 5){
         this.echo("You have found enough hidden commands! You can now use the " + hiddenLetter("complete") + " command!");
       }
 
@@ -341,14 +341,16 @@ ASCIIbuck: function(){
   },
 
   complete: function(){
-    let username = prompt("Please confirm your Telegram username without the @, this is case sensitive.");
-    if (username == "ConstellationCollie") {
-      window.location.href = "https://www.dropbox.com/s/f4uvqhq69pom88h/srvl-jakob-certificate.png?dl=0";
-  } else if (username == "Takalion") {
-    window.location.href = "https://www.dropbox.com/s/u7h3jjdeyugkpy0/srvl-taka-certificate.png?dl=0";
-  } else {
-    this.echo ("Good job! You've found the secret command, but you don't have the right username.");
-  }
+      if (hiddenCount <= 5) {
+            let username = prompt("Please confirm your Telegram username without the @, this is case sensitive.");
+            if (username == "ConstellationCollie") {
+                window.location.href = "https://www.dropbox.com/s/f4uvqhq69pom88h/srvl-jakob-certificate.png?dl=0";
+            } else if (username == "Takalion") {
+                window.location.href = "https://www.dropbox.com/s/u7h3jjdeyugkpy0/srvl-taka-certificate.png?dl=0";
+            } else {
+                this.echo ("Good job! You've found the secret command, but you don't have the right username.");
+            }
+            }
   },
 
   all: function(){
